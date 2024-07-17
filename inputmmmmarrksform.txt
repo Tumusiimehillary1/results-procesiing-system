@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Input Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<form id="marksForm">
+    <h2>Marks Input Form</h2>
+
+    <div id="studentsContainer">
+        <!-- Student input fields will be added dynamically here -->
+    </div>
+
+    <button type="button" onclick="addStudent()">Add Student</button>
+    <button type="submit">Submit Marks</button>
+</form>
+
+<script>
+    let studentCount = 0;
+
+    function addStudent() {
+        studentCount++;
+        const container = document.getElementById('studentsContainer');
+
+        const studentDiv = document.createElement('div');
+        studentDiv.innerHTML = `
+            <h3>Student ${studentCount}</h3>
+            <label for="student_${studentCount}_name">Student Name:</label>
+            <input type="text" id="student_${studentCount}_name" name="student_${studentCount}_name" required>
+            <br>
+            <label for="student_${studentCount}_math">Math Marks:</label>
+            <input type="number" id="student_${studentCount}_math" name="student_${studentCount}_math" required>
+            <br>
+            <label for="student_${studentCount}_english">English Marks:</label>
+            <input type="number" id="student_${studentCount}_english" name="student_${studentCount}_english" required>
+            <br>
+            <label for="student_${studentCount}_sst">SST Marks:</label>
+            <input type="number" id="student_${studentCount}_sst" name="student_${studentCount}_sst" required>
+            <br>
+            <label for="student_${studentCount}_science">Science Marks:</label>
+            <input type="number" id="student_${studentCount}_science" name="student_${studentCount}_science" required>
+            <br>
+        `;
+
+        container.appendChild(studentDiv);
+    }
+</script>
+
+</body>
+</html>

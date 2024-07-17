@@ -1,0 +1,26 @@
+
+  .container{
+    display: flex;
+    padding-top: 10vh;
+    padding-left: 100px;
+    width: 100%;
+    height: 30vh;
+      
+  }
+  .register{
+    padding-top: 10vh;
+    width: 20%;
+    margin-left: 15px;
+    border: 5px solid;
+ border-radius: 10px;
+ text-align: center;
+ background-color: chartreuse;
+ font-size: 20px;    
+        }
+        .welcome{
+     color:blue ;
+ text-align: center;
+ font-size: 40px;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
