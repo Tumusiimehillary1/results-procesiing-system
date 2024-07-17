@@ -28,7 +28,7 @@
         <tr>
             <th>Student ID</th>
             <th>Student Name</th>
-            <th>Math Marks</th>
+            <th>Math Marks for</th>
             <th>English Marks</th>
             <th>SST Marks</th>
             <th>Science Marks</th>

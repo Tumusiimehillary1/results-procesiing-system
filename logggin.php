@@ -20,7 +20,7 @@
         }
 
         h2 {
-            text-align: center;
+            text-align: right;
             margin-bottom: 20px;
         }
 
